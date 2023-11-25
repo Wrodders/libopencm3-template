@@ -85,11 +85,11 @@ TGT_LDFLAGS += -T$(LDSCRIPT) -L$(OPENCM3_DIR)/lib -nostartfiles
 TGT_LDFLAGS += $(ARCH_FLAGS)
 TGT_LDFLAGS += -specs=nano.specs
 TGT_LDFLAGS += -Wl,--gc-sections
-# OPTIONAL
-#TGT_LDFLAGS += -Wl,-Map=$(PROJECT).map
-ifeq ($(V),99)
+
+TGT_LDFLAGS += -Wl,-Map=$(PROJECT).map
 TGT_LDFLAGS += -Wl,--print-gc-sections
-endif
+TGT_LDFLAGS += -Wl,--print-memory-usage
+
 
 # Linker script generator fills this in for us.
 ifeq (,$(DEVICE))
