@@ -1,7 +1,7 @@
 Easy "clone and go" repository for a libopencm3 based project.
 
 # Instructions
- 1. git clone --recurse-submodules https://github.com/Wrodders/libopencm3-template 
+ 1. git clone --recurse-submodules https://github.com/Wrodders/libopencm3-template .
  2. cd libopencm3
  3. make -C libopencm3 # (Only needed once)
  4. .. && cd Firmware
